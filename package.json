@@ -1,15 +1,14 @@
 {
   "name": "linter-elsa",
   "main": "./lib/init",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Check elsa code",
   "repository": "https://github.com/ranjitjhala/linter-elsa",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "providedServices": {
     "linter": {
       "versions": {
