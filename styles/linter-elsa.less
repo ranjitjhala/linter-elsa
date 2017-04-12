@@ -1,0 +1,54 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
+// for a full listing of what's available.
+@import "ui-variables";
+@spacing: 3px;
+
+#linter-inline {
+   white-space: pre !important;
+}
+
+.linter-message-item {
+  margin-left: @spacing;
+  margin-bottom: initial;
+}
+
+linter-message {
+  font-size: @font-size;
+  line-height: 1.6;
+}
+
+linter-multiline-message {
+  display: block;
+  pointer-events: auto;
+
+  linter-message-line {
+    display: block;
+    white-space: pre;
+  }
+  linter-message-line:not(:first-child) {
+    display: block;
+    white-space: pre;
+  }
+  linter-message-line:first-child:not(:nth-last-of-type(1))::before {
+    display: none;
+  }
+}
+
+atom-text-editor::shadow .linter-highlight, .linter-highlight{
+  &.error {
+    &:not(.line-number){
+      background-color: @background-color-error;
+      color: white;
+    }
+    .linter-gutter{
+      color: @background-color-error;
+    }
+    .region {
+      // NORMAL border-bottom: 2px dotted @background-color-error;
+      border-bottom: none;
+      background-color: #fcbaba;
+    }
+  }
+}
