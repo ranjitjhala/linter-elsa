@@ -12,3 +12,14 @@ using [elsa](http://www.github.com/ucsd-progsys/elsa)
 * `$ apm install linter-elsa`
 
 * Specify the path to `elsa` in the settings; find the path by using `which elsa` in the terminal.
+
+Add this to your `config.cson`
+
+```yaml
+core:
+  customFileTypes:
+    "source.haskell": [
+      "lc"
+    ]
+```
+
